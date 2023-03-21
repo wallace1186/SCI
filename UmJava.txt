@@ -61,7 +61,7 @@ public class Main {
 			media = valores[i] + media;
 		}
 		
-		System.out.println();
+
 		System.out.println("---------------------------------------------");
 		
 		System.out.println("MÉDIA = " + media / 5);
