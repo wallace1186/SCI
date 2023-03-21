@@ -1,0 +1,68 @@
+package Main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scn = new Scanner(System.in);
+
+		int valores[] = new int[5];
+		int par[] = new int[5];
+		int impar[] = new int[5];
+		
+		System.out.println("=== INSIRA 5 VALORES DE ENTRADA ===");
+		for(int i=0; i<5; i++) {
+			System.out.println("Insira o " + (i+1) + "° valor de entrada");
+			int valor = scn.nextInt();
+			valores[i] = valor;
+		}
+		
+		System.out.println();
+		
+		for(int i=0; i<5; i++) {
+			System.out.println(valores[i]);
+		}
+		
+		System.out.println();
+		System.out.println("---------------------------------------------");
+		
+		for(int i=0; i<5; i++) {
+			if(valores[i] % 2 == 0) {
+				par[i] = valores[i];
+			}
+			else {
+				impar[i] = valores[i];
+			}
+		}
+		
+		System.out.println();
+		
+		System.out.print("VALORES PARES = ");
+		for(int i=0; i<valores.length; i++) {
+			if(par[i] != 0) {
+				System.out.print(par[i] + " ");
+			}
+		}
+		
+		System.out.println();
+		
+		System.out.print("VALORES IMPARES = ");
+		for(int i=0; i<valores.length; i++) {
+			if(impar[i] != 0) {
+				System.out.print(impar[i] + " ");
+			}
+		}
+		
+	
+		float media = 0;
+		for(int i=0; i<valores.length; i++) {
+			media = valores[i] + media;
+		}
+		
+		System.out.println();
+		System.out.println("---------------------------------------------");
+		
+		System.out.println("MÉDIA = " + media / 5);
+}}
